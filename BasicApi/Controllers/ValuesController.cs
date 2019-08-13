@@ -6,21 +6,21 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace BasicApi.Controllers
 {
-    [Route("api/[controller]")]
-    public class ValuesController : Controller
+    [Route("hello/[controller]")]
+    public class NamesController : Controller
     {
-        // GET api/values
         [HttpGet]
-        public IEnumerable<string> Get()
+        public string Get()
         {
-            return new string[] { "value1", "value2" };
+
+            return "HIII";
         }
 
         // GET api/values/5
-        [HttpGet("{id}")]
-        public string Get(int id)
+        [HttpGet("{name}")]
+        public string Get(string name)
         {
-            return "value";
+            return "Hi " +name;
         }
 
         // POST api/values
